@@ -11,6 +11,6 @@ jobs:
       - name: docker login
         run: echo ${{ secrets.DOCKER_TOKEN }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
       - name: docker push
-        run: docker push rafacom/test_docker_compose_1:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
+        run: docker push rafacom/test_docker_compose_1:$GITHUB_REF_NAME-$GITHUB_RUN_ID
 
 
