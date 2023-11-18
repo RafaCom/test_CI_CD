@@ -26,12 +26,14 @@ jobs:
       - name: copy files to server
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          host: 158.160.115.219
+          username: testuser
+#            from_secret: ssh_username
+          password: testuser
+#            from_secret: ssh_password
           source: "deploy/docker-compose.yaml,deploy/docker_config.py"
           target: "flask_app_ci"
           strip_components: 1
-# Поменять в секрете ХОСТ
+# Поменять в секрете ХОСТ ${{ secrets.USERNAME }} ${{ secrets.PASSWORD }} ${{ secrets.HOST }}
 
 
