@@ -24,7 +24,7 @@ jobs:
           cat docker-compose-ci.yaml | envsubst > deploy/docker-compose.yaml
           cat docker_ci_config.py | envsubst > deploy/docker_config.py
       - name: copy files to server
-        uses: appleboy/ssh-action@v0.1.3
+        uses: appleboy/ssh-action@v0.1.5
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
